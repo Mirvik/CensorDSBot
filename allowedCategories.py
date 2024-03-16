@@ -36,7 +36,10 @@ class AllowedCategories:
             return offensiveWords
         
         for word in offensiveWords:
-            if word[1] not in self.__allowed:
+            if word[1] in self.__allowed:
                 res.append(word)
 
         return res
+    
+    def clear(self):
+        self.__allowed.clear()
